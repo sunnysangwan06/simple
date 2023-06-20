@@ -47,9 +47,3 @@ func RandomCurrency() string {
 
 	return currencies[rand.Intn(n)]
 }
-
-// Pick random account id from a list of accounts
-func RandomAccountID(accounts []int64) int64 {
-	n := len(accounts)
-	return accounts[rand.Intn(n)]
-}

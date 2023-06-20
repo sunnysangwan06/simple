@@ -4,14 +4,13 @@ import (
 	"context"
 	"testing"
 
-	"github.com/techschool/simplebank/util"
-
 	"github.com/stretchr/testify/require"
+	"github.com/techschool/simplebank/util"
 )
 
 func createRandomEntry(t *testing.T, account Account) Entry {
 	arg := CreateEntriesParams{
-		AccountID: util.RandomInt(1, account.ID),
+		AccountID: account.ID,
 		Amount:    util.RandomMoney(),
 	}
 
